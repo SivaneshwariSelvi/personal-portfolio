@@ -1,0 +1,725 @@
+*{
+    margin:0;
+    padding:0;
+    box-sizing: border-box;
+}
+body{
+    background-color: black;
+    color: white;
+}
+/*navbar*/
+#one {
+    width: 100px;
+    height: 60px;
+    box-shadow: 5px 5px 5px #0000008c;
+    border-radius: 5px;
+    position: relative;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: black;
+    z-index:2;
+}
+
+#one::before{
+    content: "";
+    background-image: conic-gradient(
+        #00ccff,#d500f9
+    );
+    width: 170px;
+    height: 40px;
+    position: absolute;
+    animation: rotate 3s linear infinite;
+    
+}
+#one::after{
+    content: " portfolio";
+
+    width: 90px;
+    height: 50px;
+    background: black;
+    position: absolute;
+   display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    border-radius:5px;
+    font-weight: 700;
+    font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    inset:5px;
+}
+#one:hover::after{
+    text-decoration-line: underline;
+    color:aliceblue;
+}
+.two{
+    font-weight: 500;
+    padding-left: 124px;
+    transition: .3s;
+}
+.three a{
+    padding-right: 50px;
+    color:whitesmoke;
+    text-decoration: none;
+    position: relative;
+    overflow: hidden;
+}
+.three a:hover{
+    color: rgb(22, 160, 215);
+    text-decoration: underline white;
+}
+.nav-icon{
+    padding-left: 5px;
+    width: 40px;
+    height:40px;
+    border-radius: 50%;
+    border:blue;
+    box-shadow: inset 0 0 10px cyan,0 0 2px cyan;
+    background:transparent;
+    color:white;
+    padding-left: 10px;
+    padding-top: 5px;
+}
+.nav-icon:hover{
+    background-color:rgb(44, 164, 212);
+    color:black;
+    box-shadow: 0 0 5px cyan;
+
+}
+#navfix{
+    position: fixed;
+    width:100%;
+}
+/*home*/
+/*font*/
+.f1{
+    font-size: 32px;
+    font-weight: 600;
+}
+#fo1{
+    animation: slideleft 1s ease forwards;
+}
+#fo2{
+    animation: slidebottom 1s ease forwards;
+}
+.f2{
+    font-size: 40px;
+    font-weight: 700;
+    opacity:0;
+    animation: slideright 1s ease forwards;
+}
+/*content size*/
+#align1{
+    padding-top: 200px;
+    height:706px;
+    
+}
+/*icons*/
+.icons a{
+    display: flex;
+    background: transparent;
+    border:2px solid rgb(44, 164, 212);
+    border-radius: 50%;
+    width:40px;
+    height:40px;
+    color: blue;
+    justify-content: center;
+    align-items: center;
+    font-size: 40px;
+    font-weight: 500;
+    transition: .5s;
+    margin-right: 30px;
+    box-shadow: inset 0 0 5px cyan;
+    opacity:0;
+    animation: slideTop .5s ease forwards;
+    animation-delay: calc(.2s * var(--i));
+}
+.icons a:hover{
+    background-color:rgb(44, 164, 212);
+    color:black;
+    box-shadow: 0 0 10px cyan;
+
+}
+/*button*/
+#align2{
+   margin-left:50px;
+   border-radius: 30px;
+   font-size:20px;
+  font-weight: 600;
+  animation: slideTop .5s ease forwards;
+  box-shadow:inset 0 0 10px cyan,0 0 5px cyan;
+  background: transparent;
+  color: aliceblue;
+}
+#align2:hover{
+    background-color: cyan;
+    color:black;
+}
+/*image*/
+.imgs{
+    width:290px;
+    height:290px;
+    border-radius: 50%;
+    border: 2px solid white;
+    animation: circlemotion 1s ease forwards;
+}
+#align5{
+    width:300px;
+    height:300px;
+    border-radius: 50%;
+    position: relative;
+}
+#align5::before{
+    content: " ";
+    background-color: white;
+    position:absolute;
+    height:100%;
+    width:100%;
+    display: block;
+    border-radius: 50%;
+    z-index:-1;
+    animation:3.2s imgsback linear infinite alternate;
+}
+/*navport*/
+#ani1{
+    opacity:0;
+    animation: slideright 1s ease forwards;
+}
+/*navicon*/
+#ani2 a{
+    display: inline-block;
+    opacity:0;
+    animation: slideTop .5s ease forwards;
+    animation-delay: calc(.2s * var(--i));
+}
+/*about*/
+#about1{
+    height:706px;
+    background: black;
+    margin-bottom: 50px;
+}
+#about5{
+    padding-top: 80px;
+}
+.about2{
+    position: relative;
+}
+.about2::after,
+.about2::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  right: 0;
+  height: 2px;
+  background-color:cyan;
+}
+.about2::before {
+  top: 117px;
+  height: 2px; 
+  width:80px;
+}
+.about2::after {
+  top: 112px;
+  width:120px;
+  height: 2px; 
+}
+.about3{
+    width:330px;
+    height:330px;
+    border-radius: 30%;
+    border: 2px solid white;
+    margin-left: 220px;
+    margin-top: 80px;
+}
+.about4{
+    padding-top: 190px;
+}
+/*skills*/
+.skill3{
+    height:706px;
+    background:black;
+}
+#skill2{
+    padding-top: 80px;
+}
+.skill1{
+    position: relative;
+}
+.skill1::after,
+.skill1::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  right: 0;
+  height: 2px;
+  background-color:cyan;
+}
+.skill1::before {
+  top: 117px;
+  height: 2px; 
+  width:40px;
+}
+.skill1::after {
+  top: 113px;
+  width:60px;
+  height: 2px; 
+}
+#skill5{
+    width:500px;
+    height:450px;
+    margin-top: 170px;
+    margin-left: 100px;
+    box-shadow: 0 0 10px white;
+}
+#skill5:hover{
+    border-color:skyblue;
+   transform: scale(1.10);
+}
+#skill10{
+    width: 450px;
+    height:180px;
+    margin-left:30px;
+    
+}
+#skill6{
+    background-color: black;
+}
+#skill7{
+    text-decoration: underline;
+}
+.skillbar1{
+    position: relative;
+    max-width: 500px;
+    width: 100%;
+    background:transparent;
+    border-radius: 7px;
+}
+.skillbar2{
+    width: 100%;
+    margin: 25px 0;
+}
+.skillbar3{
+    display: block;
+    font-size: 14px;
+    font-weight: 600;
+    color:whitesmoke;
+}
+.skillbar4{
+    height: 8px;
+    width: 100%;
+    border-radius: 6px;
+    margin-top: 6px;
+    background: white;
+}
+.skillbar5{
+    position: relative;
+    display: block;
+    height: 100%;
+    width: 90%;
+    border-radius: 6px;
+    background: #4070f4;
+    animation: progress 0.4s ease-in-out forwards;
+    opacity: 0;
+}
+.skillbar5.css{
+    width: 70%;
+    animation-delay: 0.1s;
+}
+.skillbar5.javascript{
+    width: 50%;
+    animation-delay: 0.2s;
+}
+.skillbar5.sql{
+    width: 70%;
+    animation-delay: 0.3s;
+}
+.skillbar5.java{
+    width:60%;
+    animation-delay: 0.4s;
+}
+
+@keyframes progress {
+    0%{
+        width: 0;
+        opacity: 1;
+    }
+    100%{
+        opacity: 1;
+    }
+}
+.skillbar6{
+    position: absolute;
+    right: -14px;
+    top: -28px;
+    font-size: 9px;
+    font-weight: 500;
+    color: #fff;
+    padding: 2px 6px;
+    border-radius: 3px;
+    background: #4070f4;
+    z-index: 1;
+}
+.skillbar6::before{
+    content: '';
+    position: absolute;
+    left: 50%;
+    bottom: -2px;
+    height: 10px;
+    width: 10px;
+    z-index: -1;
+    background-color: #4070f4;
+    transform: translateX(-50%) rotate(45deg);
+
+}
+.skillcir1{
+    width:100px;
+    height:100px;
+    background-color:transparent;
+    margin-top: 20px;
+    position: relative;
+}
+.skillcir2{
+    height:100px;
+    width:100px;
+    border-radius: 50%;
+    padding-left: 8px;
+    padding-top: 8px;
+}
+.skillcir3{
+    height:80px;
+    width:80px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.skillcir4{
+    font-weight: 600;
+}
+.com{
+    fill:none;
+    stroke: url(#Gradientcolor);
+    stroke-width: 9px;
+    stroke-dasharray: 450;
+    stroke-dashoffset: 450;
+    animation: skillcir1 2s linear forwards;
+    animation-delay: 0.1s;
+}
+.pro{
+    fill:none;
+    stroke: url(#Gradientcolor);
+    stroke-width: 9px;
+    stroke-dasharray: 450;
+    stroke-dashoffset: 450;
+    animation: skillcir2 2s linear forwards;
+    animation-delay: 0.2s;
+}
+.cre{
+    fill:none;
+    stroke: url(#Gradientcolor);
+    stroke-width: 9px;
+    stroke-dasharray: 450;
+    stroke-dashoffset: 450;
+    animation: skillcir3 2s linear forwards;
+    animation-delay: 0.3s;
+}
+.tea{
+    fill:none;
+    stroke: url(#Gradientcolor);
+    stroke-width: 9px;
+    stroke-dasharray: 450;
+    stroke-dashoffset: 450;
+    animation: skillcir4 2s linear forwards;
+    animation-delay: 0.4s;
+}
+.skillcir5{
+    position: absolute;
+    left:0;
+    top:0;
+}
+
+/*card*/
+.card1{
+    width:100%;
+    height:600px;
+    margin-top:30px;
+}
+.card3{
+    display: grid;
+    grid-gap:40px;
+    margin-top: 80px;
+    height:400px;
+    width: 100%;
+}
+.card4{
+    position: relative;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 0 10px white;
+}.card4:hover  .card5{
+    height: 120%;
+}
+.card4:hover img{
+    transform: scale(1.2);
+}
+.card5{
+    height:0;
+    width:100%;
+    background: linear-gradient(transparent,#1c1c1c 58%);
+    border-radius: 10px;
+    position: absolute;
+    left:0;
+    bottom:0;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    padding: 0 40px;
+    text-align: center;
+    transition: height 0.5s;
+
+}
+.card5 h3{
+    margin-bottom: 5px;
+    margin-top: 80%;
+}
+.card5 a{
+    margin-top: 10px;
+    color:rgb(44, 164, 212);
+    border-radius: 50px;
+    text-align: center;
+    padding: 5px 15px;
+} 
+.card6{
+    width:100%;
+    height:400px;
+    border-radius: 10px;
+    transition: transform 0.5s;
+}
+.card2{
+    padding-top: 80px;
+}
+.card7{
+    position: relative;
+}
+.card7::after,
+.card7::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  right: 0;
+  height: 2px;
+  background-color:cyan;
+}
+.card7::before {
+  top: 35px;
+  height: 2px; 
+  width:50px;
+}
+.card7::after {
+  top: 30px;
+  width:75px;
+  height: 2px; 
+}
+.card8{
+    box-shadow: inset 0 0 5px cyan;
+    background:transparent;
+
+}
+.card8:hover{
+    background-color:rgb(44, 164, 212);
+    color:black;
+    box-shadow: 0 0 10px cyan;
+
+}
+/*contact*/
+#contact{
+    width:70%;
+    height:600px;
+    margin-top: 100px;
+    
+}
+.contact1{
+    padding-left:150px;
+    position: relative;
+}
+.contact1{
+    position: relative;
+}
+.contact1::after,
+.contact1::before {
+  content: "";
+  position: absolute;
+  left: 150px;
+  right: 0;
+  height: 2px;
+  background-color:cyan;
+}
+.contact1::before {
+  top: 35px;
+  height: 2px; 
+  width:60px;
+}
+.contact1::after {
+  top: 30px;
+  width:90px;
+  height: 2px; 
+}
+.contact-form {
+    display: flex;
+    flex-direction: column;
+    padding-left: 500px;
+    background: transparent;
+}
+
+.contact-form label {
+    margin-bottom: 5px;
+    font-weight: bold;
+}
+
+.contact-form input, .contact-form textarea {
+    margin-bottom: 10px;
+    padding: 10px;
+    
+    background: transparent;
+    color: #fff;
+    box-shadow: inset 0 0 5px cyan;
+    border-radius: 5px;
+}
+
+.contact-form button {
+    background: #333;
+    color: white;
+    box-shadow: inset 0 0 5px cyan;
+    background:transparent;
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    font-size: 1em;
+    cursor: pointer;
+}
+
+.contact-form button:hover {
+    background-color:rgb(44, 164, 212);
+    color:black;
+    box-shadow: 0 0 10px cyan;
+}
+
+/* Style for success message */
+.success-message {
+    margin-top: 10px;
+    color: green;
+    font-weight: bold;
+    transition: opacity 0.3s ease;
+}
+
+.success-message.hidden {
+    opacity: 0;
+}
+
+/* Style for contact info section */
+.contact-info {
+    margin-top: 20px;
+    font-size: 1.2em;
+}
+
+.contact-info p {
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+.contact-info i {
+    margin-right: 10px;
+}
+/*KEY FRAMES*/
+@keyframes slideright{
+    100%{
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+@keyframes slideTop{
+    0%{
+        transform: translateY(100px);
+        opacity: 0;
+    }
+    100%{
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+@keyframes slideleft{
+    0%{
+        transform: translateY(-100px);
+        opacity: 0;
+    }
+    100%{
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+@keyframes slidebottom{
+    0%{
+        transform: translateX(100px);
+        opacity: 0;
+    }
+    100%{
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+@keyframes circlemotion{
+    0%{
+        transform: rotate(0 deg) translateX(0px) rotate(0 deg);
+        opacity: 0;
+    }
+    100%{
+        transform: rotate(360 deg) translateX(0) rotate(-360 deg);
+        opacity: 1;
+    }
+}
+@keyframes rotate {
+    0%{
+        transform: rotate(0deg);
+    }
+    100%{
+        transform: rotate(360deg);
+    }
+}
+@keyframes imgsback{
+    0%{
+        transform:translateX(20px) scale(0.9);
+        box-shadow:none;
+    }
+    50%{
+        transform:translateX(0px,0px) scale(1.05);
+        box-shadow:0 0 10px white,0 0 80px 2px white,0 0 100px white;
+    }
+    100%{
+        transform:translateX(-30px) scale(0.9);
+        box-shadow:none;
+    }
+}
+@keyframes skillcir1{
+    100%{
+        stroke-dashoffset: 250;
+    }
+}
+@keyframes skillcir2{
+    100%{
+        stroke-dashoffset: 270;
+    }
+}
+@keyframes skillcir3{
+    100%{
+        stroke-dashoffset: 230;
+    }
+}
+@keyframes skillcir4{
+    100%{
+        stroke-dashoffset: 240;
+    }
+}
